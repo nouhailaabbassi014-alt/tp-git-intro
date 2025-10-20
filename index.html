@@ -9,28 +9,45 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 20px;
-            background-color: #3498db;
+            /* Background animé */
+            background: linear-gradient(270deg, #3498db, #2ecc71, #e74c3c);
+            background-size: 600% 600%;
+            animation: gradientBG 15s ease infinite;
         }
-        
+
+        @keyframes gradientBG {
+            0% {background-position: 0% 50%;}
+            50% {background-position: 100% 50%;}
+            100% {background-position: 0% 50%;}
+        }
+
         h1 {
-            color: #333;
+            color: #fff; /* titre plus visible sur le fond */
             text-align: center;
+            /* animation fade-in */
+            opacity: 0;
+            animation: fadeIn 2s ease-in-out forwards;
         }
-        
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
         .container {
             max-width: 800px;
             margin: 0 auto;
-            background: white;
+            background: rgba(255,255,255,0.9);
             padding: 20px;
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
-        
+
         p {
             line-height: 1.6;
             color: #666;
         }
-        
+
         .box {
             background: #e8f4f8;
             padding: 15px;
@@ -48,7 +65,7 @@
             <p>TEAM : NOUHAILA ABBASSI / AYA aoulad ahmidou / Ahlam El khammali </p>
         </div>
         
-        <p><center>first try</center></center></p>
+        <p><center>first try</center></p>
     </div>
 </body>
 </html>
